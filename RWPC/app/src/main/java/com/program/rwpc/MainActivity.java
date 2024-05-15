@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
@@ -172,8 +173,9 @@ public class MainActivity extends AppCompatActivity implements Handler.Callback 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
         
+        setContentView(R.layout.activity_main);
+
         handler = new Handler(this);
         
         net = new NetManager(handler);
