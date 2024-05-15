@@ -9,7 +9,7 @@ fn is_awake_str(str : &str) -> bool{
 fn main() -> std::io::Result<()> {
     // 创建一个UDP Socket并绑定到本地端口51360
     let socket = UdpSocket::bind("0.0.0.0:51360")?;
-
+    
     loop {
         let mut buf = [0; 1024];
         let (amt, src) = socket.recv_from(&mut buf)?;
